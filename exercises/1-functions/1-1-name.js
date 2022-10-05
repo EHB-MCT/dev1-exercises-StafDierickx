@@ -9,15 +9,11 @@ const context = canvas.getContext("2d") //create 2d context
 
 context.beginPath() //begin with drawing
 // draw letter s
-context.moveTo(20,10) // move the pen to
-context.lineTo(30, 20) // draw a line to
-context.moveTo(20, 10) // move the pen to
-context.lineTo(10, 20) // draw a line to
-context.moveTo(10, 20)
+context.moveTo(30, 20) // move the pen to
+context.lineTo(20, 10) // draw a line to
+context.lineTo(10, 20) // move line to nex coordinates without moving pencil
 context.lineTo(30, 40)
-context.moveTo(30, 40)
 context.lineTo(20, 50)
-context.moveTo(20,50)
 context.lineTo(10, 40)
 context.strokeStyle = "red" // set stroke color
 context.stroke() // draw above instructions
@@ -35,8 +31,7 @@ context.stroke()
 context.beginPath()
 context.moveTo(70, 50)
 context.lineTo(80, 10)
-context.lineTo(90, 50) // move line to nex coordinates without moving pencil
-context.strokeStyle = "green"
+context.lineTo(90, 50)
 context.stroke();
 
 // draw letter f
