@@ -13,10 +13,11 @@ function draw() {
 }
 
 function drawSunBeams() {
-    let i = 50;
-    while (i <= ) {
-        Utils.drawLine(, , , , );
-        Utils.drawLine(, , , , );
-        i = i + 10;
+    let i = 0;
+    while (i <= 25) {
+        let offset = 50+(i*(300/25))
+        Utils.drawLine(50, 50, offset, 350);
+        Utils.drawLine(50, 50, 350, offset);
+        i++;
     }
 }
