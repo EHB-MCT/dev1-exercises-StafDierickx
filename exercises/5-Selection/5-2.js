@@ -2,7 +2,7 @@
 import context from "../../scripts/context.js";
 import * as Utils from "../../scripts/utils.js";
 
-console.log("4-2.js")
+console.log("5-2.js")
 
 const width = context.canvas.width
 const height = context.canvas.height

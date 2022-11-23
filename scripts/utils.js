@@ -35,13 +35,12 @@ export function drawRectangle(x0 ,y0, x1 ,y1, color="#000000") {
     context.stroke()
 }
 
-export function fillrectangle(x0 ,y0, x1 ,y1, color="#000000") {
+export function fillRectangle(x0 ,y0, x1 ,y1, color="#000000") {
     context.fillStyle = color
 
     context.beginPath()
     context.fillRect(x0, y0 ,x1, y1)
     context.stroke()
-
 }
 
 
@@ -81,6 +80,15 @@ export function rgb(steps, iteration) {
     return rgb
 }
 
+/** function that formats an hsl value based on parameters
+ * @param {number} h the hue in degrees
+ * @param {number} s the saturation in percentage
+ * @param {number} l the lightness in percentage
+ */
+ export function hsl(h, s, l) {
+    return "hsl(" + h + "," + s + "%," + l + "%)";
+}
+
 export function randomRGB() {
     const r = Math.round(255*Math.random())
     const g = Math.round(255*Math.random())
@@ -100,4 +108,18 @@ export function randomRGBA() {
 
 export function randomIntBetween(min, max) { // generate number wetween 2 given number
     return Math.floor(Math.random() * (max - min + 1) + min)
+}
+export function randomDoubleBetween(min, max) {
+    return Math.random() * (max - min) + min
+}
+
+export function CalcAverage(list) {
+    let total = 0
+
+    list.forEach(number => {
+        // console.log(number)
+        total += number
+    });
+    // console.log(total)
+    return (total / list.length)
 }
