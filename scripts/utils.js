@@ -43,6 +43,17 @@ export function fillRectangle(x0 ,y0, x1 ,y1, color="#000000") {
     context.stroke()
 }
 
+// draw circle
+export function strokeCircle (x, y, radius, color="#000000") {
+    console.log("drawing circle("+ x +" "+ y +" "+ radius +", "+ color +")")
+    
+    context.strokeStyle = color
+    context.beginPath();
+    context.arc(x, y, radius, 0, 2 * Math.PI, true);
+    context.closePath()
+    context.stroke()
+    // context.fill()
+}
 
 export function fillCircle (x, y, radius, color="#000000") {
     console.log("drawing circle("+ x +" "+ y +" "+ radius +", "+ color +")")
@@ -55,16 +66,16 @@ export function fillCircle (x, y, radius, color="#000000") {
     context.fill()
 } 
 
-// draw circle
-export function strokeCircle (x, y, radius, color="#000000") {
-    console.log("drawing circle("+ x +" "+ y +" "+ radius +", "+ color +")")
-    
-    context.strokeStyle = color
+/**
+ *  drawn triangle
+ * @param {object} x0 x coordinate of starting point
+ * @param {object} y0 y coordinate of starting point
+ * @param {object} x1 x coordinate of end point
+ */
+export function drawTriangle (p1, p2, p3) { // unfinished
+    context.fillStyle = color
     context.beginPath();
-    context.arc(x, y, radius, 0, 2 * Math.PI, true);
-    context.closePath()
-    context.stroke()
-    // context.fill()
+
 }
 
 /**
@@ -123,3 +134,8 @@ export function CalcAverage(list) {
     // console.log(total)
     return (total / list.length)
 }
+
+export function clearCanvas(color='black') {
+    fillRectangle(0,0,width,height,color)
+}
+
