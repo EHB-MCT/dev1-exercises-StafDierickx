@@ -56,7 +56,7 @@ export function strokeCircle (x, y, radius, color="#000000") {
 }
 
 export function fillCircle (x, y, radius, color="#000000") {
-    console.log("drawing circle("+ x +" "+ y +" "+ radius +", "+ color +")")
+    // console.log("drawing circle("+ x +" "+ y +" "+ radius +", "+ color +")")
     
     context.fillStyle = color
     context.beginPath();
